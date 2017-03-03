@@ -7,7 +7,7 @@ Build
 -----
 
 ```bash
-git clone https://bitbucket.telenor.hu/scm/~tdezso/luademo.git
+git clone <URL>
 cd luademo
 make
 ```
