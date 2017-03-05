@@ -1,14 +1,14 @@
 Lua Demo
 ========
 
-Simple example to demondstrate how to call Lua functions from C
+Simple example to demonstrate how to call Lua functions from C
 
 Build
 -----
 
 ```bash
-git clone <URL>
-cd luademo
+git clone https://github.com/xsnpdngv/LuaDemo.git
+cd LuaDemo
 make
 ```
 
