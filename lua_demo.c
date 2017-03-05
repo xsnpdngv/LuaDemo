@@ -15,13 +15,11 @@
 #include <lualib.h>
 
 
-static lua_State *L; /* Lua context */
-
-
 int main(int argc, char *argv[])
 {
-    int retN;                           /* number of Lua return values */
-    int i;                              /* general index */
+    lua_State *L; /* Lua context */
+    int retN;     /* number of Lua return values */
+    int i;        /* general index */
 
     /* process arguments */
     if(argc < 3)
