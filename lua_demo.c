@@ -24,7 +24,9 @@ int main(int argc, char *argv[])
     /* process arguments */
     if(argc < 3)
     {
-        fprintf(stderr, "usage: %s <Lua_file> <Lua_func> [<Lua_arg1> ...]\n", argv[0]);
+        fprintf(stderr,
+                "usage: %s <Lua_file> <Lua_func> [<Lua_arg1> ...]\n",
+                argv[0]);
         exit(1);
     }
 
@@ -52,11 +54,12 @@ int main(int argc, char *argv[])
     for(i = 3; i < argc; ++i)
         lua_pushstring(L, argv[i]);
 
-    /* execute Lua function with the number of arguments pushed into stack and
-       3 as the (maximal) number of possible return values */
+    /* execute Lua function with the number of arguments pushed into
+       stack and 3 as the (maximal) number of possible return values */
     if(lua_pcall(L, argc - 3, 3, 0) != LUA_OK)
     {
-        fprintf(stderr, "Lua function call failure: %s\n", lua_tostring(L, -1));
+        fprintf(stderr, "Lua function call failure: %s\n",
+                lua_tostring(L, -1));
         exit(2);
     }
 
